@@ -1,15 +1,12 @@
 import { FC, ReactNode } from 'react'
 import { Header } from './Header'
 
-type Props = {
-  children: ReactNode
-  todoCount: number
-}
+type Props = { children: ReactNode }
 
-export const Layout: FC<Props> = ({ children, todoCount }) => {
+export const Layout: FC<Props> = ({ children }) => {
   return (
     <>
-      <Header todoCount={todoCount} />
+      <Header />
       <main>{children}</main>
     </>
   )
