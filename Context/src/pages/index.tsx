@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import { useContext } from 'react'
+import { TodosContext } from 'src/state/todo'
 import { Todo } from 'src/types'
-import { TodoContext } from './_app'
 
 const Home: NextPage = () => {
-  const { todos, setTodos } = useContext(TodoContext)
+  const { todos, setTodos } = useContext(TodosContext)
 
   const toggleIsDone = (id: Todo['id']) => {
     setTodos((prevTodos) => {
